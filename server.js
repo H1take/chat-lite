@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server,{cors:{origin:"*"}});
-const PORT = process.env.PORT | 9999;
+const PORT = process.env.PORT || 9999;
 
 app.use(cors());
 app.use(express.json());
